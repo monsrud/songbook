@@ -17,8 +17,8 @@ If running outside of docker, the following packages need to be installed:
 Chordrpo also needs to be installed:
     yes | cpan install wx Compress::Raw::Bzip2 IO::Compress::Base chordpro
 
-# Force re-creation of the container:
+## Force re-creation of the container:
 docker-compose up --build --force-recreate
 
-# Command line of container:
+## Command line of container:
 docker run -it -v .:/songbook songbook_songbook /bin/sh
