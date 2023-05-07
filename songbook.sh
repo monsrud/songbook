@@ -1,7 +1,10 @@
 #!/bin/sh
 
+mkdir -p source
+mkdir -p destination
+
 rm -f /tmp/songbook_data
-rm -rf destination/
+rm -f destination/*.pdf
 
 cd source
 
