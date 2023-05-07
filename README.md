@@ -5,7 +5,7 @@ The songbook 000_SongBook.pdf and PDF version of all the files will be created i
 Only 1 page songs will be added to the songbook. If a song doc contains more than a single page,
 it will converted to pdf but will not be added to the songbook. (The one page limit is just what works for
 me on my iPad so I don't need to scroll.) Chordpro, libreoffice-writer, pdftk and pdfinfo are used to 
-process the files into PDFs. All the PDFs are combined and an index/bookmarks are applied.
+process the files into PDFs. All the PDFs are combined and a bookmark index is applied.
 
 1) Place .doc, .docx, .pdf, .pro (chordpro) and .txt files into the "source" directory. 
 2) Run: docker-compose up
