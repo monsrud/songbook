@@ -9,7 +9,7 @@ process the files into PDFs. All the PDFs are combined and an index/bookmarks ar
 
 1) Place .doc, .docx, .pdf, .pro (chordpro) and .txt files into the "source" directory. 
 2) Run: docker-compose up
-3) A songbook (OOO_SongBook.pdf) and PDF version of the song files will be created in the destination directory.
+3) A songbook (OOO_SongBook.pdf) and a PDF version of the song files will be created in the destination directory.
 
 If running outside of docker, the following packages need to be installed:
     libreoffice-writer pdftk poppler-utils perl-utils perl-dev make gcc musl-dev
