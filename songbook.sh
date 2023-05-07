@@ -8,10 +8,10 @@ rm -f destination/*.pdf
 
 cd source
 
-# Convert doc,docx and txt files
-lowriter --headless --convert-to pdf *.docx
-lowriter --headless --convert-to pdf *.doc
-lowriter --headless --convert-to pdf *.txt
+# Convert doc,docx and txt files to PDF
+#lowriter --headless --convert-to pdf *.docx
+#lowriter --headless --convert-to pdf *.doc
+#lowriter --headless --convert-to pdf *.txt
 
 # Convert chordpro files to PDF
 for i in *.pro; do
@@ -29,7 +29,7 @@ for i in *.pdf; do
     pages=$(pdfinfo "$i" | awk '/^Pages:/ {print $2}')
     if [ $pages -gt 1 ]; then
         echo "Skipping $i $pages is more than 1 page long."
-        mv $i ${i}.skipped
+        mv "$i" "${i}.skipped"
         continue
     fi
 
@@ -39,7 +39,8 @@ for i in *.pdf; do
 
     printf "BookmarkBegin\nBookmarkTitle: %s\nBookmarkLevel: 1\nBookmarkPageNumber: ${pagenumber}\n" "${i%.*}">> "$tempdata"
 
-    pagenumber=$((++pagenumber))
+    pagenumber=$((pagenumber+1))
+    echo $pagenumber
 
 done
 
