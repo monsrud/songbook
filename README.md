@@ -11,14 +11,6 @@ process the files into PDFs. All the PDFs are combined and a bookmark index is a
 2) Run: docker-compose up
 3) A songbook (OOO_SongBook.pdf) and a PDF version of the song files will be created in the destination directory.
 
-If running outside of docker, the following packages need to be installed:
-
-    libreoffice-writer pdftk poppler-utils perl-utils perl-dev make gcc musl-dev
-
-Chordrpo also needs to be installed:
-
-    yes | cpan install wx Compress::Raw::Bzip2 IO::Compress::Base chordpro
-
 ## Force re-creation of the container:
 docker-compose up --build --force-recreate
 
