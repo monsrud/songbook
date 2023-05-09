@@ -9,9 +9,9 @@ rm -f destination/*.pdf
 cd source
 
 # Convert doc,docx and txt files to PDF
-#lowriter --headless --convert-to pdf *.docx
-#lowriter --headless --convert-to pdf *.doc
-#lowriter --headless --convert-to pdf *.txt
+lowriter --headless --convert-to pdf *.docx
+lowriter --headless --convert-to pdf *.doc
+lowriter --headless --convert-to pdf *.txt
 
 # Convert chordpro files to PDF
 for i in *.pro; do
