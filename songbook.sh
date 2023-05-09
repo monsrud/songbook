@@ -40,7 +40,6 @@ for i in *.pdf; do
     printf "BookmarkBegin\nBookmarkTitle: %s\nBookmarkLevel: 1\nBookmarkPageNumber: ${pagenumber}\n" "${i%.*}">> "$tempdata"
 
     pagenumber=$((pagenumber+1))
-    echo $pagenumber
 
 done
 
